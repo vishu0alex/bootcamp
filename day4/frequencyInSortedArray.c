@@ -5,7 +5,7 @@ int frequency(int arr[],int n){
     
        if( arr[i]==arr[i+1])
          count++;
-       if( arr[i]!=arr[i+1]){
+     else{
           printf("%d has frequency %d\n",arr[i],count);
           count=1;
        }
