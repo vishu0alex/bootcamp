@@ -1,37 +1,24 @@
 #include<stdio.h>
-
-int majority(int arr[],int n)
-{
-    
-
-   for(int i=0;i<n;i++)
-   {
+int majority(int arr[],int n){
     int count=1;
-    for(int j=i+1;j<n;j++)
-    {
-        if(arr[i]==arr[j])
-        {
+
+   for(int i=0;i<n;i++){
+        if(arr[i]==arr[i+1]){
             count++;
+              if(count>n/2){
+                printf("majority element = %d ",arr[i]);
+                return 0;
+              }
         }
-        
     }
-    if(count>n/2)
-        return arr[i];
-    
-   }
-   return -1;
-   
+    printf("not found");
 }
 
-     void input(int arr[],int n)
-     {
-     for(int i=0;i<n;i++)
-     {
+void input(int arr[],int n){
+    for(int i=0;i<n;i++){
         scanf("%d",&arr[i]);
-     }
-     }
-
-
+    }
+}
 
 int main(){
     int n;
@@ -40,10 +27,6 @@ int main(){
     int arr[n];
     printf("enter the elements in ");
     input(arr,n);
-    if(majority(arr,n)==-1)
-    printf("not found");
-    else
-    printf("majority=%d",majority(arr,n));
-    
+    majority(arr,n);
     return 0;
 }
