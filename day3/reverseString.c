@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<string.h>
 void reverse(char arr[],int n,int i){
-    if(i==n) return;
+    if(i>=n) return;
     int temp=arr[i];
     arr[i]=arr[n];
     arr[n]=temp;
