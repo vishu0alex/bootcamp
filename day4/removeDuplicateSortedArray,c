@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<limits.h>
+//sorted array
+void removeDuplicate(int arr[],int n){
+  // for(int i=0;i<n;i++){
+  //   if(arr[i]==arr[i+1]){
+  //     for(int j=i;j<n;j++){
+  //       arr[j]=arr[j+1];
+  //     }
+  //     n--;
+  //   }
+  // }                               o(n)
+  int j=0;
+  for(int i=1;i<n;i++){
+    if(arr[i]!=arr[j]){
+      j++;
+      arr[j]=arr[i];
+    }
+  }  
+  for(int i=0;i<j+1;i++){
+    printf("%d",arr[i]);
+  }
+}
+int main(){
+  int n;
+  scanf("%d",&n);
+  int arr[n];
+  for(int i=0;i<n;i++){
+    scanf("%d",&arr[i]);
+  }
+  removeDuplicate(arr,n);
+  return 0;
+}
