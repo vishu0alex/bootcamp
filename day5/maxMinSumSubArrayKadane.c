@@ -1,3 +1,4 @@
+//kadane algo
 #include<stdio.h>
 #include<limits.h>
 void maxsubsum(int arr[],int n){
