@@ -34,3 +34,14 @@ int main(){
   minsubsum(arr,n);
   return 0;
 }
+//brute force
+
+for(int i=0;i<n;i++){
+for(int j=i;j<n;j++){
+cursum+=arr[j];
+if(cursum>maxsum)
+  maxsum=cursum;
+}
+  cursum=0;
+}
+//for unfixed size if condition checked in inner loop and for fixed size after inner loop
